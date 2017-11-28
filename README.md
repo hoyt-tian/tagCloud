@@ -8,9 +8,7 @@ Demo :  https://www.hoyt-tian.com/
 在Ghost的Code injection中添加如下代码
 
 ```
-<script>
-Copy Content from ./dist/tagcloud.js here
-</script>
+<script src="https://cdn.rawgit.com/hoyt-tian/tagCloud/master/dist/tagcloud.js"></script> 
  
 <script>
 fetch(ghost.url.api('tags',{limit:'all'}))
