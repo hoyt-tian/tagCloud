@@ -22,7 +22,7 @@
             container.className = this.config.containerClass;            
         }
         if(this.config.containerStyle){
-            container.style = this.config.containerStyle;
+            container.style.cssText = this.config.containerStyle;
         }
 
         this.getContainer = function(){
@@ -138,7 +138,7 @@
         el.href = config.href;
         el.title = tag.description || "";
         if(config.className) el.className = config.className;
-        if(config.style) el.style = config.style;
+        if(config.style) el.style.cssText = config.style;
         el.style.backgroundColor = TagCloud.prototype.randomColor();
         el.style.color = '#FFF';
         el.target = config.target || "_blank";
