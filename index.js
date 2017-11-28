@@ -135,7 +135,7 @@
     TagCloud.prototype.createTag = function(tag, config){
         var el = document.createElement('a');
         el.innerText = tag.name;
-        el.href = config.href;
+        el.href = "/"+config.href;
         el.title = tag.description || "";
         if(config.className) el.className = config.className;
         if(config.style) el.style = config.style;
