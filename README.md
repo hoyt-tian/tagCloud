@@ -8,7 +8,7 @@ Demo :  https://www.hoyt-tian.com/
 在Ghost的Code injection中添加如下代码
 
 ```
-<script src="https://cdn.rawgit.com/hoyt-tian/tagCloud/master/dist/tagcloud.js"></script> 
+<script src="https://cdn.rawgit.com/hoyt-tian/tagCloud/v0.1.0/dist/tagcloud.js"></script> 
  
  
 <script>
