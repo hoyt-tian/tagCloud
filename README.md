@@ -10,13 +10,27 @@ Demo :  https://www.hoyt-tian.com/
 ```
 <script src="https://cdn.rawgit.com/hoyt-tian/tagCloud/master/dist/tagcloud.js"></script> 
  
+   
 <script>
-fetch(ghost.url.api('tags',{limit:'all'}))
-    .then(function(response){
-                           return response.json();
-                           })
-    .then(function(data){
-        new TagCloud(data.tags, TagCloud.prototype.plugins.ellipse).start();
-    });
+    // 手机上不显示Tag Cloud;  Never show Tag Cloud on Mobile Browser
+    var isMobile = (function(){
+    return  navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i);})();
+    
+    if(!isMobile){
+        fetch(ghost.url.api('tags',{limit:'all'}))
+        .then(function(response){
+                               return response.json();
+                               })
+        .then(function(data){
+            new TagCloud(data.tags, TagCloud.prototype.plugins.ellipse).start();
+        });
+    }
+
 </script>
 ```
